@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+  }
+  
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fac5c5;
+}
+  
+/* Layout do cabeçalho da página */
+header {
+    background-color:#222222;
+    padding: 5px;
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+}
+header>img, header>h1{
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+/* Cria três colunas/caixas que flutuam uma ao lado da outra */
+nav {
+    float: left;
+    width: 20%;
+    background: #cf1717;
+    padding: 20px;
+}
+  
+main {
+    float: left;
+    padding: 20px;
+    width: 60%;
+    text-align: justify;
+    background-color: #fac5c5;
+}
+
+aside {
+    float: right;
+    width: 20%;
+    background: #fc9191;
+    padding: 20px;
+    font-size: smaller;
+    color:#383737;
+}
+  
+/* Limpa flutuações ao final de cada section */
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+/* Layout do conteúdo principal */
+img.icone {
+  float: left;
+  width: 20%;
+  padding: 5px;
+  margin: 0px;
+}
+p.texto, h1.texto, h2.texto, h3.texto {
+  float: left;
+  width: 80%;
+  padding: 5px;
+  margin: 0px;
+}
+
+/* Layout do conteúdo relacionado */
+aside a { 
+    color: gray; 
+}
+
+/* Layout do rodapé da página */
+  footer {
+    background-color: #222222;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Layout responsivo - faz com que as três colunas/caixas se empilhem uma sobre a outra em vez de uma ao lado da outra, em telas pequenas*/
+@media (max-width: 600px) {
+    nav, main, aside {
+      width: 100%;
+      height: auto;
+    }
+}
+@media (max-width: 600px) {
+  img.icone, p.texto {
+    width: 100%;
+    height: auto;
+  }
+}

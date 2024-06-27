@@ -1,0 +1,42 @@
+/* Removendo as marcas (bullets) e a indentação das listas e definindo a largura para os itens do menu*/
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 150px;
+}
+
+/*Posicionando os itens da lista e definindo o posicionamento com o valor relative, para depois posicionar os sub-menus na posição absoluta em relação a eles.*/
+nav ul li {
+    position: relative;
+}
+
+/*Posicionamento do itens do submenu ao lado direito*/
+nav li ul {
+    position: absolute;
+    left: 149px;
+    top: 0;
+    display: none;
+}
+
+/*Melhorando a aparencia do submenu. Entretanto, ele ainda não irá aparecer*/
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    background:  #cf1717;
+    padding: 5px;
+    border-radius: 10px;
+ }
+
+ /*Exibindo o submenu*/
+nav li:hover ul { 
+    display: block;
+}
+
+/*Estilizando o evento hover*/
+nav ul li a:hover{
+    text-decoration:underline;
+    font-weight: bold;
+    background: #f29898;
+}
